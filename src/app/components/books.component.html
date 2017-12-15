@@ -1,0 +1,17 @@
+<div class="ui-g-12">
+    <div class="ui-g-2"></div>
+    <div class="ui-g-8">
+        Your Books <input #query />
+        <button pButton class="ui-button-info" label="Get My Books" (click)="getBooks(query.value)"></button>
+        {{ booksIds$ }}
+    </div>
+    <div class="ui-g-2"></div>
+</div>
+
+<div class="ui-g-12">
+    <div class="ui-g-2"></div>
+    <div class="ui-g-8">
+        Coming Soon, Please check dev tool!
+    </div>
+    <div class="ui-g-2"></div>
+</div>

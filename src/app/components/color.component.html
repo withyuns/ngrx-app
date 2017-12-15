@@ -1,0 +1,13 @@
+<div class="ui-g-12">
+    <div class="ui-g-2"></div>
+    <div class="ui-g-8">
+        <p-panel header="Get colors">
+            <button pButton class="ui-button-success" label="Get Green" (click)="makeRed()"></button>
+            <button pButton class="ui-button" label="Get Blue" (click)="makeBlue()"></button>
+            Your color <input #myColor />
+            <button pButton class="ui-button-info" label="Get My Color" (click)="makeMyColor(myColor.value)"></button>
+            <h1>{{ color$ | async }}</h1>
+        </p-panel>
+    </div>
+    <div class="ui-g-2"></div>
+</div>

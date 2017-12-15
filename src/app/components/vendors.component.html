@@ -1,0 +1,79 @@
+<div class="ui-g-12"><div class="ui-g-2"></div>
+    <div class="ui-g-8">
+        <p-panel header="Search Options">
+            Your Search keyword <input #searchStr />
+            <button pButton type="button" label="Get Vendors" (click)="getVendors(searchStr.value)"></button> 
+        </p-panel>
+    </div>
+    <div class="ui-g-2"></div>
+</div>
+
+<div class="ui-g-12">
+    <div class="ui-g-2"></div>
+    <div class="ui-g-8">
+        <p-dataTable [value]="vendors$ | async" [loading]="false">
+            <p-column field="name" header="Vendor's Name"></p-column>
+            <p-column field="code" header="Vendor's Code"></p-column>
+        </p-dataTable>
+    </div>
+    <div class="ui-g-2"></div>
+</div>
+
+<!--
+<div class="ui-g-12">
+    <div class="ui-g-2"></div>
+    <div class="ui-g-8">
+        <p-dataTable [value]="testVendors" [loading]="false">
+            <p-column field="name" header="Vendor's Name"></p-column>
+            <p-column field="code" header="Vendor's Code"></p-column>
+        </p-dataTable>
+    </div>
+    <div class="ui-g-2"></div>
+</div>
+
+<div class="ui-g-12">
+    <div class="ui-g-2"></div>
+    <div class="ui-g-8">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Code</th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let vendor of testVendors">
+                <tr>
+                    <td>{{ vendor.name }}</td>
+                    <td>{{ vendor.code }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="ui-g-2"></div>
+</div>
+
+<div class="ui-g-12">
+    <div class="ui-g-2"></div>
+    <div class="ui-g-8">
+        Vendors' status:<br/>
+        {{ vendors$ | async | json }}
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Code</th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let vendor of vendors$ | async">
+                <tr>
+                    <td>{{ vendor.name }}</td>
+                    <td>{{ vendor.name }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="ui-g-2"></div>
+</div>
+-->
+
+
